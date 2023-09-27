@@ -43,6 +43,13 @@ export class SignupComponent implements OnInit {
 
     })
   }
+  togglePasswordVisibility() {
+    this.password = !this.password;
+
+  }
+  toggleConfirmPasswordVisibility(){
+    this.confirmpassword=!this.confirmpassword;
+  }
 
   validateSubmit() {
 
