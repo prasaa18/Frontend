@@ -44,7 +44,8 @@ const ngUiLoaderConfig:NgxUiLoaderConfig={
     AppSidebarComponent,
     SignupComponent,
     ForgotPasswordComponent,
-    LoginComponent
+    LoginComponent,
+    
    ],
   imports: [
     BrowserModule,

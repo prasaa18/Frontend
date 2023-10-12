@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: []
 })
 export class AppHeaderComponent {
+role:any;
 
-  constructor() {
+  constructor(private router :Router,
+    private dialog:MatDialog) {
+  }
+
+  logout(){
+    const dialogConfig=new MatDialogConfig();
+    dialogConfig.data={
+      message:'Logout',
+      confirmation:true
+     };g hg 
+     const
+    }
   }
 }
