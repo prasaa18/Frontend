@@ -28,6 +28,7 @@ import { ChangePasswordComponent } from './dialog/change-password/change-passwor
   declarations: [
     ViewBillProductsComponent,
     ChangePasswordComponent,
+    ConfirmationComponent
   ]
 })
 export class MaterialComponentsModule {}
