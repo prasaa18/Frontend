@@ -25,7 +25,9 @@ role:any;
      const dialogref=this.dialog.open(ConfirmationComponent,dialogConfig);
      const sub=dialogref.componentInstance.onEmitStatusChange.subscribe((Response)=>{
       dialogref.close();
-      localStorage.router.navigate(['/']);
+      
+      this.router.navigate(['/']);
+      
      })
     }
     changePassword(){
