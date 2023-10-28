@@ -27,7 +27,7 @@
   
   <div mat-dialog-actions align="end">
     <button mat-raised-button color="primary" type="submit" (click)="handleSubmit()" [disabled]="!(catgeoryForm.valid && catgeoryForm.dirty)">
-        <mat-icon>Save</mat-icon>save
+        <mat-icon>Save</mat-icon>{{action}}
     </button>
     <button mat-raised-button color="warn" mat-dialog-close>
         <mat-icon>cancel</mat-icon>close</button>

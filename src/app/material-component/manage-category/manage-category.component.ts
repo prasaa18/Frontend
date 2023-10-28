@@ -56,7 +56,7 @@ export class ManageCategoryComponent implements OnInit {
   handleAddAction() {
     // Implement the logic for adding a category here
     const dialogConfig=new MatDialogConfig();
- dialogConfig.data={
+     dialogConfig.data={
 
      action:'Add'
     };

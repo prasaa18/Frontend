@@ -21,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LoginComponent } from './login/login.component';
 import { TokenInterceptorInterceptor } from './services/token-interceptor.interceptor';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 const ngUiLoaderConfig:NgxUiLoaderConfig={
   text:"Loading...",
@@ -51,7 +52,7 @@ const ngUiLoaderConfig:NgxUiLoaderConfig={
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
+  FormsModule,
     ReactiveFormsModule,
     MaterialModule,
     SharedModule,
@@ -59,6 +60,7 @@ const ngUiLoaderConfig:NgxUiLoaderConfig={
     SharedModule,
     HttpClientModule,
     MatDialogModule,
+    MatFormFieldModule,
     MatButtonModule,
   NgxUiLoaderModule.forRoot(ngUiLoaderConfig)
   

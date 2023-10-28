@@ -20,7 +20,7 @@ export class CategoryComponent implements OnInit {
   action:any="Add";
   responSeMessage:any;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public   dialogData:any,
+  constructor(@Inject(MAT_DIALOG_DATA) public dialogData:any,
   private formBuilder:FormBuilder,
   private categoryService:CategoryService,
   public dialogRef:MatDialogRef<CategoryComponent>,
