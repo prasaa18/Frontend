@@ -69,7 +69,7 @@ export class ManageProductComponent implements OnInit {
 
     action:'Add'
    };
-   dialogConfig.width="1500px";
+   dialogConfig.width="850px";
    const dialogRef=this.dialog.open(ProductComponent,dialogConfig);
    this.router.events.subscribe(()=>{
      dialogRef.close();
@@ -91,7 +91,7 @@ export class ManageProductComponent implements OnInit {
         action:'Edit',
         data:values
        };
-       dialogConfig.width="1500px";
+       dialogConfig.width="850px";
        const dialogRef=this.dialog.open(ProductComponent,dialogConfig);
        this.router.events.subscribe(()=>{
          dialogRef.close();

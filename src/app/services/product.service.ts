@@ -12,16 +12,20 @@ export class ProductService {
 
   constructor(private httpClient:HttpClient) { }
 
+
+
   add(data:any){
-    return this.httpClient.post(this.url +"/product/add",data,{
-      headers:new HttpHeaders().set('Content-Type',"application/json")
+    return this.httpClient.post(this.url + "/product/add",data,{
+      headers: new HttpHeaders().set('Content-Type','application/json')
     })
   }
+
   update(data:any){
-    return this.httpClient.post(this.url +"/product/update",data,{
-      headers:new HttpHeaders().set('Content-Type',"application/json")
+    return this.httpClient.post(this.url + "/product/update",data,{
+      headers: new HttpHeaders().set('Content-Type','application/json')
     })
   }
+ 
   getProduct(){
    return this.httpClient.get(this.url+"/product/get");
   }
