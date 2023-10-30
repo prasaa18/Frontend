@@ -64,7 +64,7 @@ export class ProductComponent implements OnInit {
 
       }
       else {
-        this.responseMessage = GlobalConstants.genericError;
+         this.responseMessage = GlobalConstants.genericError;
       }
       this.snackbarService.openSnackbar(this.responseMessage, GlobalConstants.error);
     })
@@ -80,7 +80,7 @@ export class ProductComponent implements OnInit {
     }
     
   }
-
+ 
   
   add(){
 
