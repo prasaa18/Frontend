@@ -30,4 +30,7 @@ update(data:any){
   getCategory(){
     return this.httpClient.get(this.url + "/category/get");
   }
+  getFliterCategory(){
+    return this.httpClient.get(this.url + "/category/get?filterValue=true");
+  }
 }

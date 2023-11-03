@@ -14,6 +14,10 @@ export class GlobalConstants{
 
     public static unauthorized:string="You are not authorized person to acess this page";
 
+    public static productExistError:string="Product already Exist ";
+    
+    public  static productAdded:string="Product Adsuccessfully";
+
 
 
 }
