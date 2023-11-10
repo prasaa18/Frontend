@@ -16,20 +16,24 @@ role:any;
     private dialog:MatDialog) {
   }
 
-  logout(){
-    const dialogConfig=new MatDialogConfig();
-    dialogConfig.data={
-      message:'Logout',
-      confirmation:true
-     };
-     const dialogref=this.dialog.open(ConfirmationComponent,dialogConfig);
-     const sub=dialogref.componentInstance.onEmitStatusChange.subscribe((Response)=>{
-      dialogref.close();
-      
-      this.router.navigate(['/']);
-      
-     })
-    }
+  logout() {
+  const dialogConfig = new MatDialogConfig();
+  dialogConfig.data = {
+    message: 'Logout',
+    confirmation: true
+  };
+
+  // Open a dialog with ConfirmationComponent
+  const dialogRef = this.dialog.open(ConfirmationComponent, dialogConfig);
+
+  // Subscribe to the onEmitStatusChange event from the ConfirmationComponent
+  const sub = dialogRef.componentInstance.onEmitStatusChange.subscribe((response) => {
+    // When the user confirms, navigate to the home page and then close the dialog
+    this.router.navigate(['/']);
+    dialogRef.close();
+  });
+}
+
     changePassword(){
       const dialogConfig=new MatDialogConfig();
       dialogConfig.width="550px";
