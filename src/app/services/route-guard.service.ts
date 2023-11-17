@@ -34,12 +34,16 @@ export class RouteGuardService {
       this.router.navigate(['/']);
     }
     let expectedRole='';
+   
+   
     for(let i=0;  i<expectedRoleArray.length; i++){
       if(expectedRoleArray[i] == tokenPayload.role){
         expectedRole=tokenPayload.role;
       }
     }
-    if (tokenPayload.role=='user' || tokenPayload.role=='admin'){
+
+
+    if (expectedRoleArray.includes(tokenPayload.role)){
       if(this.authServices.isAuthenticated() && tokenPayload.role==expectedRole){
         return true;
       }
@@ -50,8 +54,9 @@ export class RouteGuardService {
     }
     else{
       
-      localStorage.clear();
+     
       this.router.navigate(['/']);
+      localStorage.clear();
       
       return false;
     }

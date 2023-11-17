@@ -4,6 +4,8 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { SnackbarService } from '../services/snackbar.service';
 import { error } from 'console';
 import { GlobalConstants } from '../shared/global-constants';
+import { ActivatedRouteSnapshot, Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 @Component({
 	selector: 'app-dashboard',
 	templateUrl: './dashboard.component.html',
@@ -19,7 +21,7 @@ export class DashboardComponent implements AfterViewInit {
 
 	constructor(private dashboardService:DashboardService,
 		private ngxService:NgxUiLoaderService,
-		private snackBarService:SnackbarService) {
+		private snackBarService:SnackbarService,private router:Router) {
 
 			this.ngxService.start();
 			this.dashboardData();
